@@ -5,7 +5,8 @@ import compose from 'koa-compose';
 // We need to convert list of separated route in to the one
 // The block below does dynamic import all routers inside current directory.
 const routers = [];
-glob.sync(path.join(__dirname, 'router*.[tj]s')).forEach((file)=> {
+
+glob.sync(path.join(__dirname, 'route*.[tj]s')).forEach((file)=> {
   const r = require(path.resolve(file)).default;
   routers.push(r);
 });

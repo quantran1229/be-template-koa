@@ -9,7 +9,6 @@ const defaultRouterReturn = async (ctx) => {
     res.setSuccess(undefined, Constant.instance.HTTP_CODE.Success, "Welcome to Backend API. There is no route right now. Add router in routers folder");
     return res.send(ctx);
 }
-
 // default api return
 router.get('/', defaultRouterReturn);
 
