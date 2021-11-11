@@ -1,0 +1,36 @@
+{
+  "name": "be-template-api",
+  "version": "1.0.0",
+  "description": "BE nodejs template for API",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "babel src -d dist",
+    "start": "nodemon"
+  },
+  "author": "Quan Tran",
+  "license": "ISC",
+  "dependencies": {
+    "@koa/cors": "^3.1.0",
+    "dayjs": "^1.10.7",
+    "dotenv": "^10.0.0",
+    "helmet": "^4.6.0",
+    "koa": "^2.13.4",
+    "koa-bodyparser": "^4.3.0",
+    "koa-compose": "^4.1.0",
+    "koa-helmet": "^6.1.0",
+    "koa-morgan": "^1.0.1",
+    "koa-router": "^10.1.1",
+    "winston": "^3.3.3"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.16.0",
+    "@babel/core": "^7.16.0",
+    "@babel/node": "^7.16.0",
+    "@babel/plugin-transform-runtime": "^7.16.0",
+    "@babel/preset-env": "^7.16.0",
+    "@babel/register": "^7.16.0",
+    "@babel/runtime-corejs2": "^7.16.3",
+    "nodemon": "^2.0.15"
+  }
+}
