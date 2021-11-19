@@ -23,6 +23,22 @@ export default class Constant {
     APP_PORT = process.env.APP_PORT;
     APP_HOST = process.env.APP_HOST;
     NODE_ENV = process.env.NODE_ENV;
+    LOGS_PATH = process.env.LOGS_PATH;
+    HEALTH_CHECK_KEY = process.env.HEALTH_CHECK_KEY;
+
+    // Database config
+    DATABASE_CONFIG = {
+        dialect: process.env.DATABASE_DIALECT,
+        host: process.env.DATABASE_HOST,
+        database: process.env.DATABASE_NAME,
+        port: process.env.DATABASE_PORT,
+        username: process.env.DATABASE_USERNAME,
+        password: process.env.DATABASE_PASSWORD,
+        logging: process.env.DATABASE_LOGGING,
+    }
+
+    DEFAULT_PAGE_NUMBER = 1;
+    DEFAULT_LIMIT_PER_PAGE = 20;
 
     constructor(){
     }

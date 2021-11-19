@@ -1,6 +1,8 @@
 dist
 logs
 node_modules
-.env
+.env_*
+.env*
 deploy-*.sh
 package-lock.json
+mediafiles

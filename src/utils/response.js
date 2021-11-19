@@ -9,6 +9,8 @@ export default class Response {
 
     setSuccess(data, statusCode, msg, code) {
         this.statusCode = statusCode ? statusCode : Constant.instance.HTTP_CODE.Success;
+        if (this.statusCode == Constant.instance.HTTP_CODE.SuccessNoContent)
+            return;
         this.content = {
             statusCode: this.statusCode,
             data,

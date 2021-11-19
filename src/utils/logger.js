@@ -59,11 +59,11 @@ const logger = winston.createLogger({
         // - Write all logs with level `info` and below to `combined.log`
         //
         new winston.transports.File({
-            filename: `logs/error-${dayjs().format("DDMMYYYY")}.log`,
+            filename: `${Constant.instance.LOGS_PATH}/error-${dayjs().format("DDMMYYYY")}.log`,
             level: "error",
         }),
         new winston.transports.File({
-            filename: `logs/combined-${dayjs().format("DDMMYYYY")}.log`,
+            filename: `${Constant.instance.LOGS_PATH}/combined-${dayjs().format("DDMMYYYY")}.log`,
             level: "info",
         }),
     ],

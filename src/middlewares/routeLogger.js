@@ -2,7 +2,7 @@ import dayjs from 'dayjs';
 import Logger from '../utils/logger';
 
 // Log middleware to show log(time, call, ...) at end of every finish route call
-async function routeLog(ctx, next) {
+async function routeLog(ctx,next) {
     const startTime = dayjs().clone();
     let error = null;
     try {
@@ -19,6 +19,7 @@ async function routeLog(ctx, next) {
     );
     if (error !== null) {
         ctx.throw(error.status, error.message);
+        Logger.error(error.message);
     }
 }
 
